@@ -1,0 +1,17 @@
+#!/bin/bash -x
+
+sum=0
+until [ $r1 -eq 6 ] && [ $r2 -eq 6 ]
+do
+r1=$((RANDOM%6+1))
+((c++))
+r2=$((RANDOM%6+1))
+((d++))
+sum=$((sum+d+c))
+
+done
+
+echo "num of rolls:"$sum
+
+
+
