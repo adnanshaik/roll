@@ -2,13 +2,14 @@
 
 while [ 1 ]
 do
-n=$((RANDOM%10000))
+n=$((RANDOM%10000))     				#Generates 4 digit random number
 ((a++))
-for ((i=1;i<=n;i++))
+count=0
+for ((i=1;i<=n;i++))                                   #checks the condition for prime number
 do
 	if [ $((n%i)) -eq 0 ]
-	then
-	  ((count++))
+	then						
+	  ((count++))                                    
 	fi
 	done
 	if [ $count -eq 2 ]
